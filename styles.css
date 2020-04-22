@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-rendering: antialiased !important;
+  -webkit-font-feature-settings: optimizeLegibility!important;
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  width: 100vw;
+  height: 53px;
+  background: rgb(41, 41, 41);  
+}
+
+nav .content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .content .functions {
+  display: flex; 
+  align-items: center;
+}
+
+nav .content .functions input {
+  background: rgba(255, 255, 255, 0.1);
+  width: 300px;  
+  padding: 5px 40px 5px 10px;
+  color: #fff;
+  border: none;
+  font-size: 1.5em;
+  border-radius: 2px;
+  position: relative;
+}
+
+nav .content .functions input:after {
+  content: '';
+  height: 220px;
+  width: 220px;
+  border: 1px solid #fff;
+  top: 150;
+  bottom: 150;
+  background: rgba(233, 109, 109, 1);
+}
+
+nav .content .functions ul {
+  display: flex;
+  list-style: none;
+}
+
+nav .content .functions ul li {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #fff;
+}
+
+nav .content .functions img {
+  height: 3.2em;
+  filter: invert(100%) sepia(55%) saturate(266%) hue-rotate(203deg) brightness(118%) contrast(100%);  
+  padding: 0 20px;
+}
+
+nav .user {
+  display: flex;
+  align-items: center;
+}
+
+nav .user ul {
+  list-style: none;
+  display: flex;
+}
+
+nav .user ul li {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* FIXING IRREGULAR SIZE AND COLOR SVGS */
+nav .user img {  
+  height: 15px;
+  filter: invert(100%) sepia(55%) saturate(266%) hue-rotate(203deg) brightness(118%) contrast(100%);
+}
+
+nav .user .new img:nth-child(2) {
+  height: 9px;
+}
+
+nav .user .new .plus {
+  height: 13px;
+  margin-right: 3px;
+}
+
+nav .user .new .avatar {
+  height: 20px;
+  margin-right: 3px;
+  width: 20px;
+  background: rgba(233, 109, 109, 1);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 2px;
+  filter: none;
+}
+
+
+/* FIXING IRREGULAR SIZE SVGS */
