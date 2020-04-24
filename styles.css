@@ -119,7 +119,6 @@ DROPDOWN */
   flex-direction: column;
   background: rgb(41, 41, 41);
   z-index: -1;
-  transition: top 100ms ease;
 }
 
 .mover:hover {
@@ -238,6 +237,9 @@ nav .user .new .avatar {
   label {
     display: none;
   }
+  .mover {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -257,6 +259,8 @@ nav .user .new .avatar {
   nav .content .menu {
     display: flex;
   }
+
+  
 
   
 }
