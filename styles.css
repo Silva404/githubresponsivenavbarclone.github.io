@@ -24,6 +24,31 @@ nav .content {
   justify-content: space-between;
 }
 
+nav .content .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40px;
+  width: 18px;
+  display: none;
+  margin-left: 40px;
+}
+
+nav .content .menu:hover {
+  opacity: 0.7;
+  transition: opacity ease;
+}
+
+.one, 
+.two, 
+.three{
+  width: 100%;
+  background: #fff;  
+  height: 3px;
+  margin: 1.5px auto;
+  border-radius: 2px;
+}
+
 nav .content .functions {
   display: flex; 
   align-items: center;
@@ -39,20 +64,25 @@ nav .content .functions input {
   border-radius: 2px;
   position: relative;
   outline: none;
+  display: flex;
+  transition: width 250ms ease-in-out;
 }
 
+nav .content .functions input:hover {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.95);
+}
 
-
-nav .content .functions input:after {
+/* nav .content .functions input:after {
   content: '';
   height: 220px;
   width: 220px;
-  border: 1px solid #fff;
+  border: 1px solid rgb(175, 90, 90);
   top: 150;
   bottom: 150;
   background: rgba(233, 109, 109, 1);
   CHIBATAAA
-}
+} */
 
 nav .content .functions ul {
   display: flex;
@@ -60,6 +90,7 @@ nav .content .functions ul {
 }
 
 nav .content .functions ul li {
+  flex-shrink: 0;
   margin-left: 15px;
   font-weight: bold;
   font-size: 1.4em;
@@ -118,5 +149,27 @@ nav .user .new .avatar {
   filter: none;
 }
 
+/* tablets e cells */
+@media screen and (max-width: 1000px) {
+  nav {
+    height: 63px;    
+  }
+  nav .content .functions input,
+  nav .content .functions ul {
+    display: none;
+  }
 
-/* FIXING IRREGULAR SIZE SVGS */
+  nav .user ul li img:not(.bell) {
+    display: none;
+    margin: 0;
+  }
+
+  nav .content .menu {
+    display: flex;
+  }
+  
+  nav .content .menu:hover + input {
+    
+  }
+}
+
