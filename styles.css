@@ -24,6 +24,11 @@ nav .content {
   justify-content: space-between;
 }
 
+
+#toogle {
+  display: none;
+}
+
 nav .content .menu {
   display: flex;
   flex-direction: column;
@@ -102,12 +107,89 @@ nav .content .functions img {
   filter: invert(100%) sepia(55%) saturate(266%) hue-rotate(203deg) brightness(118%) contrast(100%);  
   padding: 0 20px;
 }
+/* ============================
+DROPDOWN */
+
+
+.dropdownmenu {
+  position: absolute;
+  margin-top: 10px;
+  top: 53px;
+  left: 0px;
+  width: 100vw;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  background: rgb(41, 41, 41);
+  display: none;
+}
+
+nav .content .dropdownmenu input {
+  background: rgba(255, 255, 255, 0.1);
+  width: 85%;  
+  margin: 0 auto 20px;
+  left: -10px;
+  padding: 5px 40px 5px 10px;
+  color: #fff;
+  border: none;
+  font-size: 1.5em;
+  border-radius: 2px;
+  position: relative;
+  outline: none;
+  display: flex;
+  transition: width 250ms ease-in-out;
+}
+
+nav .content .dropdownmenu ul li:first-child::before {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: -3px;
+  left: 0;
+
+}
+
+nav .content .dropdownmenu ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;  
+  width: 85%; 
+  position: relative;
+  margin: 0 auto;
+  left: -10px;
+}
+
+nav .content .dropdownmenu ul li {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav .content .dropdownmenu ul li .avatar{
+  height: 20px;
+  margin-right: 4px;
+  width: 20px;
+  background: rgba(233, 109, 109, 1);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 2px;
+  filter: none;
+
+}
 
 nav .user {
   display: flex;
   align-items: center;
 }
 
+/* ============================
+DROPDOWN */
 nav .user ul {
   list-style: none;
   display: flex;
@@ -167,9 +249,8 @@ nav .user .new .avatar {
   nav .content .menu {
     display: flex;
   }
-  
-  nav .content .menu:hover + input {
-    
-  }
+
+  .dropdownmenu {
+    display: flex;    
 }
 
