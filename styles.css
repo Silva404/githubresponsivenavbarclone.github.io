@@ -24,9 +24,7 @@ nav .content {
   justify-content: space-between;
 }
 
-#toogle {
-  display: none;
-}
+
 
 nav .content .menu {
   display: flex;
@@ -36,11 +34,24 @@ nav .content .menu {
   width: 18px;
   display: none;
   margin-left: 40px;
+  opacity: 0.7;
 }
 
-nav .content .menu:hover {
+nav .content .functions:hover, .dropdownmenu ul li span:hover {
   opacity: 0.7;
   transition: opacity ease;
+}
+
+#toogle:checked + .mover {
+  top: 53px;
+}
+
+label { 
+  cursor: pointer;
+}
+
+#toogle {
+  display: none;
 }
 
 .one, 
@@ -77,17 +88,6 @@ nav .content .functions input:hover {
   background: rgba(255, 255, 255, 0.95);
 }
 
-/* nav .content .functions input:after {
-  content: '';
-  height: 220px;
-  width: 220px;
-  border: 1px solid rgb(175, 90, 90);
-  top: 150;
-  bottom: 150;
-  background: rgba(233, 109, 109, 1);
-  CHIBATAAA
-} */
-
 nav .content .functions ul {
   display: flex;
   list-style: none;
@@ -108,19 +108,22 @@ nav .content .functions img {
 }
 /* ============================
 DROPDOWN */
-
-
-.dropdownmenu {
+.mover {
   position: absolute;
   margin-top: 10px;
-  top: 53px;
+  top: -285px;
   left: 0px;
   width: 100vw;
   height: 340px;
   display: flex;
   flex-direction: column;
   background: rgb(41, 41, 41);
-  display: none;
+  z-index: -1;
+  transition: top 100ms ease;
+}
+
+.mover:hover {
+  top: 53px;
 }
 
 nav .content .dropdownmenu input {
@@ -231,6 +234,12 @@ nav .user .new .avatar {
 }
 
 /* tablets e cells */
+@media screen and (min-width: 1000px) {
+  label {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   nav {
     height: 63px;    
@@ -249,7 +258,6 @@ nav .user .new .avatar {
     display: flex;
   }
 
-  .dropdownmenu {
-    display: flex;    
+  
 }
 
